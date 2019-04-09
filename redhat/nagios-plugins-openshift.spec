@@ -1,23 +1,23 @@
 Summary: Monitoring scripts for OpenShift
 Name: nagios-plugins-openshift
 Version: 0.17.5
-Release: 1
+Release: 2
 License: BSD-3-Clause
 Source: .
 URL: https://github.com/appuio/nagios-plugins-openshift
 Vendor: VSHN AG
 Packager: Michael Hanselmann <hansmi@vshn.ch>
-BuildRequires: python34-devel
+BuildRequires: python36-devel
 Requires: bash
 Requires: curl >= 7.21.3
 Requires: nagios-plugins-dns
 Requires: openshift-origin-client-tools >= 3.7.2
 Requires: jq >= 1.5
-Requires: python34
+Requires: python36
 Requires: python3-nagiosplugin >= 1.2
-Requires: python34-requests >= 2.12
-Requires: python34-urllib3 >= 1.13
-Requires: python34-dateutil
+Requires: python36-requests >= 2.12
+Requires: python36-urllib3 >= 1.13
+Requires: python36-dateutil
 
 %package config
 Requires: icinga2, nagios-plugins-sudo-config
