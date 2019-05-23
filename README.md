@@ -19,6 +19,16 @@ Install the plugins from our [Ubuntu
 PPA](https://launchpad.net/~vshn/+archive/ubuntu/icinga), or build the Debian
 packages from source.
 
+### Using the plugins on OMD
+
+After installing from PPA, move the plugins from `/usr/lib/nagios/plugins/` to `/opt/omd/sites/<sitename>/local/lib/nagios/plugins`. Make sure the permissions are set to <sitename>. After that, using WATO, go to `Host & Service Parameters -> Active checks -> Classical active and passive Monitoring checks` and create one custom check for every check and every host you want to check, like the example below:
+  
+  ```
+Service description:    Node 'node1.example.com' check
+Command line:			      $USER2$/check_openshift_node -f /path/to/kubeconfig -n node1.example.com
+  ```
+
+And specify the host you would like to check as a condition of the check.
 
 ## List of plugins
 
